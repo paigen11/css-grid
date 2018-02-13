@@ -31,6 +31,10 @@
     .container {
       display: grid;
       grid-gap: 20px;
+      grid-template-columns: 200px repeat(4, 1fr 2fr) 100px repeat(2, 5fr); /* repeat lets you size all your columns
+      the same without writing them out and define the size as well - you can define more than
+      one column size as well and it will alternate them, you can also mix in regular column sizes
+      and more repeats to your heart's content...*/
     }
   </style>
 </body>

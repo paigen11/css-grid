@@ -9,7 +9,31 @@
 </head>
 
 <body>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+    <div class="item">9</div>
+    <div class="item">10</div>
+    <div class="item">11</div>
+  </div>
 
+  <style>
+    .container {
+      display: grid; /* when displaying as a container, all children become grid items */
+      grid-template-columns: 200px auto 500px 50px; /* this takes all the children items
+      and lays them out with 100px width in three columns - you can use pixels, ems, percentages, etc.*/
+      /* auto is good for responsive designs and sizing */
+      grid-gap: 20px; /* puts gutter spacing between your items */
+      grid-template-rows: 200px 100px 400px; /* rows work the same as columns */
+    }
+
+  </style>
 </body>
 
 </html>
