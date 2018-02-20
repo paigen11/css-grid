@@ -37,6 +37,10 @@
       display: grid;
       grid-gap: 20px;
       border: 10px solid var(--yellow);
+      grid-template-columns: repeat(auto-fill, 150px); /* auto-fill will figure out how many items
+      it can fit as the browser resizes dynamically*/
+      /* auto-fit will end the grid if there's not enough items to fill the entire grid as it's described
+      handy when you want to specifically place an item somewhere (like always at the end of a column) */
     }
   </style>
 </body>

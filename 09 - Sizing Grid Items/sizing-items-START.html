@@ -46,13 +46,15 @@
     .container {
       display: grid;
       grid-gap: 20px;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(5, 1fr); /* fr stands for free space */
     }
 
     .item9 {
       background-color: mistyrose;
       /*width: 500px; !* since this is explicitly declared,*/
-      /*it sizes all the other items in that column to 500px*/
+      /*it sizes all the other items in that column to 500px - amazing!*/
+      grid-column: span 3; /* span will say this item should take up the width of however many spaces is declared */
+      grid-row: span 2; /* same thing for rows - the power! */
     }
   </style>
 </body>

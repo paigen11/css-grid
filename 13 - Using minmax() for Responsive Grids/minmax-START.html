@@ -21,7 +21,12 @@
       display: grid;
       grid-gap: 20px;
       border: 10px solid var(--yellow);
-      grid-template-columns: repeat(auto-fit, 150px);
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr )); /* to let items flow and be however
+      large they need to for their content, you can use minmax and specify a minimum-width and a max-width */
+      /* if you use auto-fit, it will make the items fill the space (with 1fr, anyway) and still wrap when it hits
+      the 150px min limit */
+      grid-template-columns: fit-content(100px) 150px 150px 150px; /* fit-content will let you specify
+      an item get no wider than a certain, specified max value */
     }
   </style>
 </body>

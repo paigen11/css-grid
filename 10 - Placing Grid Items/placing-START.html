@@ -18,7 +18,7 @@
     <div class="item item6">6</div>
     <div class="item item7">7</div>
     <div class="item item8">8</div>
-    <div class="item item8">💩</div>
+    <div class="item item8 poop">💩</div>
     <div class="item item9">9</div>
     <div class="item item10">10</div>
     <div class="item item11">11</div>
@@ -48,6 +48,20 @@
       display: grid;
       grid-gap: 20px;
       grid-template-columns: repeat(5, 1fr);
+    }
+
+    .poop {
+      /*grid-column-start: 2; !* this tells exactly where we want that element to begin: column 2 *!*/
+      /*grid-column-end: 5; !* and this says where we want to end it: column 5  - OMG specific placement!!*!*/
+      background: #BADA55;
+      grid-column: 2 / 5; /* shorthand for column start and end */
+      grid-row: 1 / span 2; /* you can also do this */
+
+      /* if you want to take up an entire grid, you must define both the columns and rows, but you can then do:
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
+      and it will take up all the explicit grid and implicitly define the rest of the elements
+       */
     }
   </style>
 </body>
