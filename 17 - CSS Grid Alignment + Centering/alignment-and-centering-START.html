@@ -70,7 +70,27 @@
     .container {
       display: grid;
       grid-gap: 20px;
-      grid-template-columns: repeat(10, 1fr);
+      border: 10px solid var(--yellow);
+      grid-template-columns: repeat(5, 100px);
+      grid-template-rows: repeat(5, 100px);
+      /*justify-items: center; !* this is along the x axis, default of justify items is stretch,*/
+      /*but center will make the actual item itself only as wide as it needs to be,*/
+       /*you can use start and end too *!*/
+      /*align-items: end; !* align items is along the y axis, the same as justify items *!*/
+      place-items: stretch stretch; /* cutting edge css */
+
+      justify-content: space-around; /* same x axis, but it will take all the space around, space between, etc.
+      it can tell items where to go when not using fr or some other space filling grid technique */
+      align-content: space-around;
+    }
+
+    .itm {
+      background: white;
+    }
+
+    .itm5{
+      justify-self: center; /* just like with flexbox, you can justify-self and specify that element in particular */
+      align-self: center;
     }
   </style>
 </body>
